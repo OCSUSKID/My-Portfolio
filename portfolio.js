@@ -112,11 +112,11 @@ if (hamburger && navLinks) {
   if (!el) return;
 
   const phrases = [
-    'build stunning UIs.',
-    'craft clean APIs.',
-    'design systems.',
-    'love open-source.',
-    'ship great products.',
+    'BUILD RELIABLE SOFTWARE.',
+    'CRAFT BEAUTIFUL UIs.',
+    'SHIP GREAT PRODUCTS.',
+    'SOLVE HARD PROBLEMS.',
+    'LOVE CLEAN CODE.',
   ];
 
   let phraseIdx = 0;
@@ -244,6 +244,18 @@ $$('.proj-filter').forEach(btn => {
       const show = filter === 'all' || card.dataset.category === filter;
       card.classList.toggle('hidden', !show);
     });
+
+    // Reset carousel position on filter change
+    const carousel = $('#projects-carousel');
+    if (carousel) carousel.scrollTo({ left: 0, behavior: 'smooth' });
+
+    // Sync carousel buttons
+    const prevBtn = $('.carousel-prev');
+    const nextBtn = $('.carousel-next');
+    if (prevBtn) prevBtn.disabled = true;
+    const visible = [...document.querySelectorAll('.project-card')].filter(c => !c.classList.contains('hidden'));
+    const perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+    if (nextBtn) nextBtn.disabled = visible.length <= perView;
   });
 });
 
@@ -340,4 +352,54 @@ function showToast(message) {
   );
 
   sections.forEach(s => observer.observe(s));
+})();
+
+// ── Projects carousel ──────────────────────────────────────────────────────────
+(function initCarousel() {
+  const carousel   = $('#projects-carousel');
+  const prevBtn    = $('.carousel-prev');
+  const nextBtn    = $('.carousel-next');
+  if (!carousel || !prevBtn || !nextBtn) return;
+
+  let currentIndex = 0;
+
+  function getVisibleCards() {
+    return $$('.project-card', carousel).filter(c => !c.classList.contains('hidden'));
+  }
+
+  function cardsPerView() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function updateCarousel() {
+    const visible = getVisibleCards();
+    const perView = cardsPerView();
+    const maxIndex = Math.max(0, visible.length - perView);
+    currentIndex = Math.min(currentIndex, maxIndex);
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+
+    if (visible.length === 0) return;
+
+    const cardWidth = visible[0].offsetWidth + 24; // card + gap
+    carousel.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = Math.max(0, currentIndex - 1);
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const visible = getVisibleCards();
+    const maxIndex = Math.max(0, visible.length - cardsPerView());
+    currentIndex = Math.min(maxIndex, currentIndex + 1);
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel, { passive: true });
+  updateCarousel();
 })();

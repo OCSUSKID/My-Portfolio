@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Creative Developer</title>
+  <title>Success Okoroafor – Software Engineer</title>
   <link rel="stylesheet" href="portfolio.css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,9 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- ── Canvas background ───────────────────────────────────────────────── -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
   <!-- ── Navigation ─────────────────────────────────────────────────────── -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
@@ -43,12 +40,12 @@
     <div class="hero-content">
       <p class="hero-greeting">Hello, World! 👋</p>
       <h1 class="hero-name">
-        I'm <span class="gradient-text">Success Okoroafor</span>
+        <span class="name-im">I'M </span><span class="name-first">SUCCESS</span>
+        <span class="name-last">OKOROAFOR</span>
       </h1>
-      <p class="hero-role">
-        <span class="typed-prefix">I </span>
-        <span id="typed-text" class="typed-text"></span>
-        <span class="typed-cursor" aria-hidden="true">|</span>
+      <p class="hero-tagline">
+        <span class="hero-tagline-bar" aria-hidden="true">|</span>
+        <span id="typed-text" class="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span>
       </p>
       <p class="hero-bio">
         Software Engineer <i> | </i> Full-stack developer crafting high-performance digital
@@ -77,26 +74,9 @@
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <div class="hero-avatar">
-        <div class="avatar-ring ring-1"></div>
-        <div class="avatar-ring ring-2"></div>
-        <div class="avatar-ring ring-3"></div>
-        <div class="avatar-photo">
-          <span class="avatar-initials">SO</span>
-        </div>
-        <!-- Floating badges -->
-        <div class="float-badge badge-top-right">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Fast</span>
-        </div>
-        <div class="float-badge badge-bottom-left">
-          <span class="badge-icon">🎨</span>
-          <span class="badge-text">Creative</span>
-        </div>
-        <div class="float-badge badge-top-left">
-          <span class="badge-icon">🔒</span>
-          <span class="badge-text">Secure</span>
-        </div>
+      <div class="hero-blob-wrapper">
+        <div class="hero-blob-bg"></div>
+        <img src="Hero.jpg" alt="Success Okoroafor" class="hero-photo-img">
       </div>
     </div>
 
@@ -111,7 +91,7 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="section-tag">// about me</p>
-        <h2 class="section-title">Who Am I?</h2>
+        <h2 class="section-title">About Me</h2>
       </div>
 
       <div class="about-grid">
@@ -130,7 +110,7 @@
 
         <div class="about-text-col reveal">
           <p class="about-lead">
-            I'm a passionate <strong>Software Engineer</strong> / <strong>Full-Stack Developer</strong> with 3+ years of
+            I'm a passionate Software Engineer / Full-Stack Developer with 3+ years of
             experience building scalable web applications and beautiful interfaces.
           </p>
           <p class="about-body">
@@ -159,21 +139,27 @@
   </section>
 
   <!-- ── Skills ─────────────────────────────────────────────────────────── -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">// skills</p>
-        <h2 class="section-title">What I Work With</h2>
-      </div>
+  <section id="skills" class="skills-section">
+    <div class="skills-tabs-area">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">// skills</p>
+          <h2 class="section-title">What I Work With</h2>
+        </div>
 
-      <div class="skills-tabs" role="tablist" aria-label="Skill categories">
-        <button class="skill-tab active" role="tab" aria-selected="true" data-target="frontend">Frontend</button>
-        <button class="skill-tab" role="tab" aria-selected="false" data-target="backend">Backend</button>
-        <button class="skill-tab" role="tab" aria-selected="false" data-target="tools">Tools &amp; Design</button>
+        <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab active" role="tab" aria-selected="true" data-target="frontend">Frontend</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-target="backend">Backend</button>
+          <button class="skill-tab" role="tab" aria-selected="false" data-target="tools">Tools &amp; Design</button>
+        </div>
       </div>
+    </div>
 
-      <!-- Frontend skills -->
-      <div class="skills-panel active" id="panel-frontend" role="tabpanel">
+    <div class="skills-grid-area">
+      <div class="container">
+
+        <!-- Frontend skills -->
+        <div class="skills-panel active" id="panel-frontend" role="tabpanel">
         <div class="skills-grid">
           <div class="skill-card reveal" data-skill="HTML / CSS" data-level="95">
             <div class="skill-icon" aria-hidden="true">🌐</div>
@@ -345,28 +331,29 @@
           </div>
         </div>
       </div>
-    </div>
+      </div><!-- /.skills-grid-area .container -->
+    </div><!-- /.skills-grid-area -->
   </section>
 
   <!-- ── Projects ───────────────────────────────────────────────────────── -->
-  <section id="projects" class="section">
+  <section id="projects" class="projects-section">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">// projects</p>
-        <h2 class="section-title">Featured Work</h2>
+      <div class="projects-header reveal">
+        <h2 class="section-title">Featured Works</h2>
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="proj-filter active" data-filter="all">All</button>
+          <button class="proj-filter" data-filter="web">Web App</button>
+          <button class="proj-filter" data-filter="mobile">Mobile</button>
+          <button class="proj-filter" data-filter="design">Design</button>
+        </div>
       </div>
 
-      <div class="project-filters" role="group" aria-label="Filter projects">
-        <button class="proj-filter active" data-filter="all">All</button>
-        <button class="proj-filter" data-filter="web">Web App</button>
-        <button class="proj-filter" data-filter="mobile">Mobile</button>
-        <button class="proj-filter" data-filter="design">Design</button>
-      </div>
-
-      <div class="projects-grid">
+      <div class="projects-carousel-wrapper">
+        <button class="carousel-btn carousel-prev" aria-label="Previous projects">&#8249;</button>
+        <div class="projects-carousel" id="projects-carousel">
 
         <article class="project-card reveal" data-category="web">
-          <div class="project-img" style="--grad: linear-gradient(135deg,#6366f1,#8b5cf6)">
+          <div class="project-img" style="--grad: linear-gradient(135deg,#f97316,#fb923c)">
             <span class="project-emoji" aria-hidden="true">🛒</span>
             <div class="project-overlay">
               <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
@@ -388,7 +375,7 @@
         </article>
 
         <article class="project-card reveal" data-category="web">
-          <div class="project-img" style="--grad: linear-gradient(135deg,#f59e0b,#ef4444)">
+          <div class="project-img" style="--grad: linear-gradient(135deg,#93c5fd,#a5f3fc)">
             <span class="project-emoji" aria-hidden="true">📊</span>
             <div class="project-overlay">
               <a href="#" class="proj-link" aria-label="Live demo of Analytics Dashboard">Live Demo ↗</a>
@@ -410,7 +397,7 @@
         </article>
 
         <article class="project-card reveal" data-category="mobile">
-          <div class="project-img" style="--grad: linear-gradient(135deg,#10b981,#06b6d4)">
+          <div class="project-img" style="--grad: linear-gradient(135deg,#86efac,#bbf7d0)">
             <span class="project-emoji" aria-hidden="true">🏃</span>
             <div class="project-overlay">
               <a href="#" class="proj-link" aria-label="Live demo of FitTrack App">App Store ↗</a>
@@ -497,7 +484,9 @@
           </div>
         </article>
 
-      </div>
+        </div><!-- /.projects-carousel -->
+        <button class="carousel-btn carousel-next" aria-label="Next projects">&#8250;</button>
+      </div><!-- /.projects-carousel-wrapper -->
     </div>
   </section>
 
