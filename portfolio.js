@@ -233,6 +233,13 @@ $$('.skill-tab').forEach(tab => {
   });
 });
 
+// ── Shared carousel helpers ────────────────────────────────────────────────────
+function cardsPerView() {
+  if (window.innerWidth <= 768) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
+}
+
 // ── Project filters ────────────────────────────────────────────────────────────
 $$('.proj-filter').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -254,8 +261,7 @@ $$('.proj-filter').forEach(btn => {
     const nextBtn = $('.carousel-next');
     if (prevBtn) prevBtn.disabled = true;
     const visible = [...document.querySelectorAll('.project-card')].filter(c => !c.classList.contains('hidden'));
-    const perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-    if (nextBtn) nextBtn.disabled = visible.length <= perView;
+    if (nextBtn) nextBtn.disabled = visible.length <= cardsPerView();
   });
 });
 
@@ -361,16 +367,11 @@ function showToast(message) {
   const nextBtn    = $('.carousel-next');
   if (!carousel || !prevBtn || !nextBtn) return;
 
+  const CARD_GAP_PX = 24; // matches CSS gap: 1.5rem at default 16px base
   let currentIndex = 0;
 
   function getVisibleCards() {
     return $$('.project-card', carousel).filter(c => !c.classList.contains('hidden'));
-  }
-
-  function cardsPerView() {
-    if (window.innerWidth <= 768) return 1;
-    if (window.innerWidth <= 1024) return 2;
-    return 3;
   }
 
   function updateCarousel() {
@@ -384,7 +385,7 @@ function showToast(message) {
 
     if (visible.length === 0) return;
 
-    const cardWidth = visible[0].offsetWidth + 24; // card + gap
+    const cardWidth = visible[0].offsetWidth + CARD_GAP_PX;
     carousel.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
   }
 
