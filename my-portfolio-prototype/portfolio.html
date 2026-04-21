@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Prototype</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <nav id="navbar" role="navigation" aria-label="Main navigation" class="scrolled">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo" aria-label="Go to top">
+                <span class="logo-bracket">&lt;</span>Omega<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#about">Skills</a></li>
+                <li><a href="#about">Projects</a></li>
+                <li><a href="#about">Experience</a></li>
+                <li><a href="#about">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hire Me</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, World! 👋</p>
+            <h1 class="hero-name">
+                I'm <span class="gradient-text">Success Okoroafor</span>
+            </h1>
+            <p class="hero-role">
+                <span class="typed-prefix">I</span>
+                <Span id="typed-text" class="typed-text"></Span>
+                <span class="typed-cursor" aria-hidden="true">|</span>
+            </p>
+            <p class="hero-bio">
+                Software Engineer <i> | </i> Full-stack developer crafting high-performance digital
+                experiences that look stunning and work flawlessly.
+            </p>
+            <div class="hero-action">
+                <a href="projects" class="btn btn-primary">View my Work</a>
+                <a href="contact" class="btn btn-ghost">Let's Talk</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num" data-target="5">10</span> <span>+</span>
+                    <span class="stat-label">PROJECTS</span>
+                </div>
+                <div class="stats-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-num" data-target="5">3</span> <span>+</span>
+                    <span class="stat-label">YEARS EXP.</span>
+                </div>
+                <div class="stats-divider" aria-hidden="true"></div>
+                <div class="stat">
+                    <span class="stat-num" data-target="3">0</span> <span>+</span>
+                    <span class="stat-label">HAPPY CLIENTS</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visuals" aria-hidden="true">
+            <div class="hero-avatar">
+                <div class="avatar-ring ring-1"></div>
+                <div class="avatar-ring ring-2"></div>
+                <div class="circle">
+                    <img class="hero-removebg-img" src="Hero-removebg-preview.png">
+                </div>
+                <div class="float-badge badge-top-right">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-text">Fast</span>
+                </div>
+                <div class="float-badge badge-bottom-left">
+                    <span class="badge-icon">🎨</span>
+                    <span class="badge-text">Creative</span>
+                </div>
+                <div class="float-badge badge-top-left">
+                    <span class="badge-icon">🔒</span>
+                    <span class="badge-text">Secure</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#about" class="scroll-cta" aria-label="Scroll to the About section">
+            <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+            <span class="scroll-label">Scroll</span>
+        </a>
+    </section>
+
+    <section id="about" class="about">
+
+    </section>
+    <section id="skills" class="skills">
+
+    </section>
+    <section id="project" class="project">
+
+    </section>
+    <section id="experience" class="experience">
+
+    </section>
+    <section id="testimonial" class="testimonial">
+
+    </section>
+    <section id="contact" class="contact">
+
+    </section>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
