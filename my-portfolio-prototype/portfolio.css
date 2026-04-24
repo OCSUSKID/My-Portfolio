@@ -1223,7 +1223,7 @@ section {
   padding: .185rem .55rem;
   font-size: .7rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--accent-3);
   background: rgba(99,102,241,.1);
   backdrop-filter: blur(12px);
 }
