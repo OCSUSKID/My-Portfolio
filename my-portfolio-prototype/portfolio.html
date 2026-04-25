@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Prototype</title>
+    <title>Portfolio - Success Okoroafor</title>
     <link rel="stylesheet" href="portfolio.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +28,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Hire Me</a>
+
+            <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -495,8 +500,8 @@
                     <div class="project-img" style="--grad: linear-gradient(135deg,#f59e0b,#ef4444)">
                         <span class="project-emoji" aria-hidden="true">📊</span>
                         <div class="project-overlay">
-                            <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
-                            <a href="#" class="proj-link" aria-label="GitHub source of E-Commerce Platform">GitHub ↗</a>
+                            <a href="#" class="proj-link" aria-label="Live demo of Analytics Dashboard">Live Demo ↗</a>
+                            <a href="#" class="proj-link" aria-label="GitHub source of Analytics Dashboard">GitHub ↗</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -511,12 +516,12 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-category="web">
+                <article class="project-card reveal" data-category="mobile">
                     <div class="project-img" style="--grad: linear-gradient(135deg,#10b981,#06b6d4)">
                         <span class="project-emoji" aria-hidden="true">🏃</span>
                         <div class="project-overlay">
-                            <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
-                            <a href="#" class="proj-link" aria-label="GitHub source of E-Commerce Platform">GitHub ↗</a>
+                            <a href="#" class="proj-link" aria-label="Live demo of FitTrack App">Live Demo ↗</a>
+                            <a href="#" class="proj-link" aria-label="GitHub source of FitTrack App">GitHub ↗</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -532,12 +537,12 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-category="web">
+                <article class="project-card reveal" data-category="design">
                     <div class="project-img" style="--grad: linear-gradient(135deg,#ec4899,#f43f5e)">
                         <span class="project-emoji" aria-hidden="true">🎨</span>
                         <div class="project-overlay">
-                            <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
-                            <a href="#" class="proj-link" aria-label="GitHub source of E-Commerce Platform">GitHub ↗</a>
+                            <a href="#" class="proj-link" aria-label="Live demo of Brand Design System">Live Demo ↗</a>
+                            <a href="#" class="proj-link" aria-label="GitHub source of Brand Design System">GitHub ↗</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -557,8 +562,8 @@
                     <div class="project-img" style="--grad: linear-gradient(135deg,#3b82f6,#1d4ed8)">
                         <span class="project-emoji" aria-hidden="true">🤖</span>
                         <div class="project-overlay">
-                            <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
-                            <a href="#" class="proj-link" aria-label="GitHub source of E-Commerce Platform">GitHub ↗</a>
+                            <a href="#" class="proj-link" aria-label="Live demo of AI Chat Interface">Live Demo ↗</a>
+                            <a href="#" class="proj-link" aria-label="GitHub source of AI Chat Interface">GitHub ↗</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -573,12 +578,12 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-category="web">
+                <article class="project-card reveal" data-category="mobile">
                     <div class="project-img" style="--grad: linear-gradient(135deg,#f97316,#fbbf24)">
                         <span class="project-emoji" aria-hidden="true">🗺️</span>
                         <div class="project-overlay">
-                            <a href="#" class="proj-link" aria-label="Live demo of E-Commerce Platform">Live Demo ↗</a>
-                            <a href="#" class="proj-link" aria-label="GitHub source of E-Commerce Platform">GitHub ↗</a>
+                            <a href="#" class="proj-link" aria-label="Live demo of Local Explorer">Live Demo ↗</a>
+                            <a href="#" class="proj-link" aria-label="GitHub source of Local Explorer">GitHub ↗</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -724,19 +729,124 @@
                 <h3 class="section-title">Let's Build Something</h3>
             </div>
 
-            <div class="">
+            <div class="contact-grid">
 
-                <div>
-                    
+                <div contact-info>
+                    <p class="contact-lead">
+                        Have a project in mind? I'd love to hear about it. Let's create something extraordinary
+                        together.
+                    </p>
+                    <ul class="contact-list" role="list">
+                        <li class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">📧</span>
+                            <div>
+                                <span class="contact-item-label">Email</span>
+                                <a href="mailto:sokoroafor744@gmail.com"
+                                    class="contact-item-value">sokoroafor744@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">📍</span>
+                            <div>
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-value">Nigeria, IMO (Remote-friendly)</span>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-icon" aria-hidden="true">⏰</span>
+                            <div>
+                                <span class="contact-item-label">Response Time</span>
+                                <span class="contact-item-value">Within 24 hours</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="social-links" role="list" aria-label="social media links">
+                        <a href="https://GitHub.com/OCSUSKID" target="_blank" class="social-link" role="listitem"
+                            aria-label="GitHub profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.3-1.23 3.3-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.57 22.3 24 17.8 24 12.5 24 5.87 18.63.5 12 .5z" />
+                            </svg>
+                        </a>
+                        <a href="https://LinkedIn.com/in/Success-Okoroafor" target="_blank" class="social-link"
+                            role="listitem" aria-label="LinkedIn profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.56 20.45h3.56V9H3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/@OCSUSKID" target="_blank" class="social-link" role="listitem"
+                            aria-label="Twitter / X profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://codepen.io/your-work" target="_blank" class="social-link" role="listitem"
+                            aria-label="CodePen profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M24 8.182l-.018-.087-.017-.05c-.01-.024-.018-.05-.03-.075-.003-.018-.015-.034-.02-.05l-.035-.067-.03-.05-.044-.06-.046-.045-.06-.045-.046-.03-.06-.044-.044-.04-.015-.02L12.58.19c-.347-.232-.796-.232-1.142 0L.453 7.502l-.015.015-.044.035-.06.05-.038.04-.05.056-.037.045-.05.06c-.02.017-.03.03-.03.046l-.05.06-.02.06c-.02.01-.02.04-.03.07l-.01.05C0 8.12 0 8.15 0 8.18v7.497c0 .044.003.09.01.135l.01.046c.005.03.015.06.02.086l.015.05c.01.027.016.053.027.075l.022.05c0 .01.015.04.03.06l.03.04c.015.01.03.04.045.06l.03.04.04.04c.01.013.01.03.03.03l.06.042.04.03.01.014 10.97 7.33c.164.12.375.163.57.163s.39-.06.57-.18l10.99-7.28.014-.01.046-.037.06-.043.048-.036.015-.02.06-.05.03-.04.04-.06.015-.02.03-.05.023-.08.02-.05.01-.05.007-.1v-7.49c0-.045-.003-.09-.007-.133zm-11.99 6.28l-3.65-2.44 3.65-2.442 3.65 2.44-3.65 2.44zm-1.034-6.674l-4.473 2.99L2.89 8.362l8.086-5.39V7.79zm-6.33 4.233l-2.582 1.73V10.3l2.582 1.726zm1.857 1.25l4.473 2.99v4.82L2.89 15.69l3.612-2.417v-.004zm6.537 2.99l4.474-2.98 3.613 2.42-8.087 5.39v-4.82zm6.33-4.23l2.583-1.72v3.456l-2.583-1.73zm-1.855-1.24L13.042 7.8V2.97l8.085 5.39-3.612 2.415v.003z" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                <form id="contact-form" class="contact-form reveal" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-name">Name</label>
+                            <input type="text" id="cf-name" name="name" placeholder="Your name" required
+                                autocomplete="name">
+                            <span class="form-error" id="err-name" role="alert"></span>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="cf-name">Email</label>
+                            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required
+                                autocomplete="name">
+                            <span class="form-error" id="err-email" role="alert"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cf-name">Subject</label>
+                        <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cf-name">Message</label>
+                        <textarea type="text" id="cf-message" name="message" placeholder="Tell me about your project…"
+                            rows="5" required></textarea>
+                        <span class="form-error" id="err-message" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="cf-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon" aria-hidden="true">→</span>
+                    </button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="#hero" class="nav-logo footer-logo" aria-label="Back to top">
+                <span class="logo-bracket">&lt;</span>Omega<span class="logo-bracket">/&gt;</span>
+            </a>
 
+            <p class="footer-copy">
+                Crafted with ❤️ & ☕ by Success Okoroafor · © <span id="footer-year">2026</span>
+            </p>
+            <a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
+        </div>
     </footer>
 
+    <!-- toast -->
+    <p id="portfolio-toast" class="p-toast" role="status" aria-live="polite"></p>
+
+    <script src="portfolio.js"></script>
 </body>
 
 </html>
